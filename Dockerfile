@@ -14,5 +14,6 @@ EXPOSE 8135/udp
 
 
 ENV TIDEWAYS_HOSTNAME tideways-daemon
+ENV TIDEWAYS_ENVIRONMENT production
 
-CMD ["/usr/bin/tideways-daemon", "--hostname=${TIDEWAYS_HOSTNAME}", "--address=0.0.0.0:9135" , "--udp=0.0.0.0:8135"]
+CMD ["/usr/bin/tideways-daemon", "--hostname=${TIDEWAYS_HOSTNAME}", "--address=0.0.0.0:9135" , "--udp=0.0.0.0:8135", "--env=${TIDEWAYS_ENVIRONMENT}"]
